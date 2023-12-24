@@ -1,0 +1,40 @@
+{
+  "name": "pokemon-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest tests"
+  },
+  "keywords": [
+    "expressjs",
+    "nodejs",
+    "restapi",
+    "mongoose"
+  ],
+  "author": "anil pulkaram",
+  "license": "ISC",
+  "dependencies": {
+    "apicache": "^1.6.3",
+    "body-parser": "^1.20.2",
+    "config": "^3.3.9",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.0",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1",
+    "winston-mongodb": "^5.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}
