@@ -21,11 +21,8 @@ const getPokemonById = async function (req, res, next) {
 
 const getPokemon = async function (req, res, next) {
   try {
-    const request = req.body;
-    const pokemon = await service.getPokemon(
-      request.metaData.query,
-      request.metaData.pagination,
-    );
+    const query = req.body;
+    const pokemon = await service.getPokemon(query);
     res.status(200).send(pokemon);
   } catch (err) {
     next(err);

@@ -21,52 +21,11 @@ const getPokemonById = async function (id) {
   }
 };
 
-const getPokemon = async function (query, pagination) {
+const getPokemon = async function (query) {
   try {
-    const { pageStart, pageSize } = pagination;
-    if (pageSize == -1) {
-      const pokemon = await Pokemon.find(query.filter);
-      return pokemon;
-    } else {
-      const pokemon = await Pokemon.find(query.filter)
-        .skip((pageStart - 1) * pageSize)
-        .limit(pageSize);
-      return pokemon;
-    }
-  } catch (err) {
-    throw err;
-  }
-};
-
-const getPokemonByName = async function (name) {
-  try {
-    const pokemon = await Pokemon.findOne({ name: name });
-    if (!pokemon) {
-      throw new Error("pokemon with given name not found");
-    }
-    return pokemon;
-  } catch (err) {
-    throw err;
-  }
-};
-
-const getPokemonByRegion = async function (region) {
-  try {
-    const pokemon = await Pokemon.find({ region: region });
-    if (!pokemon) {
-      throw new Error("pokemon with given region not found");
-    }
-    return pokemon;
-  } catch (err) {
-    throw err;
-  }
-};
-
-const getPokemonByType = async function (type) {
-  try {
-    const pokemon = await Pokemon.find({ types: type });
-    if (!pokemon) {
-      throw new Error("pokemon with given type not found");
+    const pokemon = await Pokemon.find(query);
+    if (pokemon.length == 0) {
+      throw new Error("pokemon with given filter not found");
     }
     return pokemon;
   } catch (err) {
@@ -78,7 +37,4 @@ module.exports = {
   getAllPokemon,
   getPokemonById,
   getPokemon,
-  getPokemonByName,
-  getPokemonByType,
-  getPokemonByRegion,
 };

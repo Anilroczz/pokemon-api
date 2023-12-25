@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon API Home</title>
+    <link href="/css/index.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="index-header">
+        <h1>Pokémon API</h1>
+        <p>Explore the world of Pokémon through our API</p>
+    </header>
+
+    <section class="index-section">
+        <h2>Features</h2>
+        <ul>
+            <li>Retrieve detailed information about specific Pokémon</li>
+            <li>Search for Pokémon based on various criteria</li>
+        </ul>
+    </section>
+
+    <section class="index-section">
+        <h2>Getting Started</h2>
+
+        <div class="endpoint">
+            <code class="index-code">GET /api/0.0.1/pokemon</code>
+            <p>Retrieve a list of all available Pokémon.</p>
+            <div class="example">
+                <span>Example:</span>
+                <pre>curl -X GET https://app-domain.com/api/0.0.1/pokemon</pre>
+            </div>
+        </div>
+
+        <div class="endpoint">
+            <code class="index-code">GET /api/0.0.1/pokemon/{id or name}</code>
+            <p>Retrieve detailed information about a specific Pokémon based on its ID or name.</p>
+            <div class="example">
+                <span>Example:</span>
+                <pre>curl -X GET https://app-domain.com/api/0.0.1/pokemon/25</pre>
+            </div>
+        </div>
+
+        <div class="endpoint">
+            <code class="index-code">POST /api/0.0.1/pokemon/search</code>
+            <p>Retrieve Pokémon based on certain criteria. Provide the criteria in the request body.</p>
+            <div class="example">
+                <span>Example:</span>
+                <pre>curl -X POST -H "Content-Type: application/json" -d '{"type": "electric"}' https://app-domain.com/api/0.0.1/pokemon/search</pre>
+            </div>
+        </div>
+    </section>
+
+    <footer class="index-footer">
+        <p>&copy; 2023 Pokémon API. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,4 +1,0 @@
-[2023-12-24 17:13:15:1315] info: Mongoose default connection open to mongo cluster instance
-[2023-12-24 17:13:15:1315] info: Connection to MongoDB instance established successfully
-[2023-12-24 17:13:15:1315] info: Http API Server Started!
-[2023-12-24 17:13:15:1315] info: Insecure :: Server running on port 4500

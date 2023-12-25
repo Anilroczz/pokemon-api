@@ -1,7 +1,7 @@
 const morgan = require("morgan");
 
 const httpLogger = function (req, res, next) {
-  morgan("combined", {
+  morgan("dev", {
     stream: {
       write: (message) => {
         const http_message = message
