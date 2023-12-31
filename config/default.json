@@ -32,9 +32,9 @@
     "mongoTransportOptions": {
       "errorOptions": {
         "level": "error",
-        "db": "mongodb+srv://anilpulkaram:anilpulkaram@cluster0.t50a7xa.mongodb.net/",
-        "dbName": "PokemonDB",
-        "collection": "error-logs",
+        "db": "",
+        "dbName": "",
+        "collection": "",
         "options": {
           "useNewUrlParser": true,
           "useUnifiedTopology": true
@@ -42,9 +42,9 @@
       },
       "httpOptions": {
         "level": "http",
-        "db": "mongodb+srv://anilpulkaram:anilpulkaram@cluster0.t50a7xa.mongodb.net/",
-        "dbName": "PokemonDB",
-        "collection": "http-logs",
+        "db": "",
+        "dbName": "",
+        "collection": "",
         "options": {
           "useNewUrlParser": true,
           "useUnifiedTopology": true
