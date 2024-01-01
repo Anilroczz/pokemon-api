@@ -8,6 +8,7 @@ const helmet = require("helmet");
 const cors = require("cors");
 const httpLogger = require("./middleware/httpLogger");
 const errorHandler = require("./middleware/errorHandler");
+const corsOptions = require("./config/corsOptions.js");
 
 const app = express();
 
@@ -19,7 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(helmet());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(httpLogger);
 
 app.use("/", require("./routes/index.router.js"));

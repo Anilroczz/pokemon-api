@@ -7,6 +7,7 @@ const cache = apicache.middleware;
 
 router.get("/", cache("5 minutes"), controller.getAllPokemon);
 router.get("/:id", controller.getPokemonById);
-router.post("/", controller.getPokemon);
+// router.post("/", controller.getPokemon);
+router.post("/", controller.insertPokemon);
 
 module.exports = router;

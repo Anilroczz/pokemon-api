@@ -13,7 +13,7 @@ const getPokemonById = async function (id) {
   try {
     const pokemon = await Pokemon.findOne({ dex_number: id });
     if (!pokemon) {
-      throw new Error("pokemon with given dex number not found");
+      throw new Error(`pokemon with given dex number ${id} not found`);
     }
     return pokemon;
   } catch (err) {
@@ -33,8 +33,20 @@ const getPokemon = async function (query) {
   }
 };
 
+const insertPokemon = async function (pokemon) {
+  try {
+    const savedPokemon = await Pokemon.create(pokemon);
+    return savedPokemon;
+  } catch (err) {
+    throw err;
+  }
+};
+
+const updatePokemonImages = async function () {};
+
 module.exports = {
   getAllPokemon,
   getPokemonById,
   getPokemon,
+  insertPokemon,
 };

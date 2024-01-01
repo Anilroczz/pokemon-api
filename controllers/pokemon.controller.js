@@ -29,8 +29,22 @@ const getPokemon = async function (req, res, next) {
   }
 };
 
+const insertPokemon = async function (req, res) {
+  try {
+    const pokemon = req.body;
+    if (!pokemon) {
+      throw new Error("Request Body is empty");
+    }
+    const newPokemon = await service.insertPokemon(pokemon);
+    res.status(201).send(newPokemon);
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   getAllPokemon,
   getPokemonById,
   getPokemon,
+  insertPokemon,
 };
