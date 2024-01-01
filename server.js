@@ -2,7 +2,6 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const cookieParser = require("cookie-parser");
 const path = require("node:path");
 const helmet = require("helmet");
 const cors = require("cors");
@@ -18,7 +17,6 @@ app.use("/css", express.static(path.join(__dirname, "public", "css")));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(helmet());
 app.use(cors(corsOptions));
 app.use(httpLogger);
