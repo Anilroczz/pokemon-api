@@ -5,7 +5,7 @@ const pokemonSchema = new Schema({
   dex_number: {
     type: Number,
     required: [true, "pokemon dex number is required"],
-    unique: [true, "pokemon dex number must be unique"],
+    unique: true,
   },
   name: {
     type: String,
@@ -65,6 +65,7 @@ const pokemonSchema = new Schema({
         required: [true, "pokemon shiny image source url is required"],
       },
     },
+    required: [true, "pokemon images are required"],
   },
   region: {
     type: String,
