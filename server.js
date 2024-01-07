@@ -22,10 +22,10 @@ app.use(cors(corsOptions));
 app.use(httpLogger);
 
 app.use("/", require("./routes/index.router.js"));
-app.use("/api/0.0.1/pokemon", require("./routes/pokemon.router.js"));
+app.use("/api/v1/pokemon", require("./routes/pokemon.router.js"));
 
 app.all("*", function (req, res) {
-  errorlogger.error("404 Page Not Found!!");
+  logger.log("error","404 Page Not Found!!");
   res.status(404).render("404");
 });
 

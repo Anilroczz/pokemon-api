@@ -7,7 +7,7 @@ const httpLogger = function (req, res, next) {
         const http_message = message
           .replace(/\x1b\[[0-9;]*m/g, "")
           .replace(/\n/g, "");
-        httplogger.http(http_message);
+        logger.log("http",http_message);
       },
     },
   })(req, res, next);
