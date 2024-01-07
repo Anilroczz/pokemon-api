@@ -4,7 +4,7 @@ module.exports = {
     applicationOptions: {
         datePattern: "YYYY-MM-DD",
         dirname: "logs",
-        filename: "application-%DATE%.log",
+        filename: "application-logs-%DATE%.log",
         zippedArchive: true,
         auditFile: "./audits/application-audit.json",
         maxSize: "20m",
@@ -13,16 +13,16 @@ module.exports = {
     errorOptions: {
         datePattern: "YYYY-MM-DD",
         dirname: "logs",
-        filename: "error-%DATE%.log",
+        filename: "error-logs-%DATE%.log",
         zippedArchive: true,
         auditFile: "./audits/error-audit.json",
         maxSize: "20m",
         maxFiles: "14d"
     },
-    httpOptionss: {
+    httpOptions: {
         datePattern: "YYYY-MM-DD",
         dirname: "logs",
-        filename: "http-%DATE%.log",
+        filename: "http-logs-%DATE%.log",
         zippedArchive: true,
         auditFile: "./audits/http-audit.json",
         maxSize: "20m",
